@@ -1,0 +1,73 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+:root{
+    --spacing: 30px;
+    --scroll-bar-radius: 100px;
+    --scroll-bar-size: 10px
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: var(--scroll-bar-radius);
+    background-color: var(--bs-gray-500);
+    height: var(--scroll-bar-size);
+  }
+  &::-webkit-scrollbar {
+    width: var(--scroll-bar-size);
+    background-color: #f5f5f5;
+    height: var(--scroll-bar-size);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--scroll-bar-radius);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--bs-blue);
+    height: var(--scroll-bar-size);
+  }
+}
+
+.scroll-x {
+  float: bottom;
+  height: calc(100% - var(--spacing));
+  width: calc(100vw - var(--spacing));
+  overflow-x: scroll;
+  margin: auto;
+}
+
+.task{
+    --scroll-bar-width: 5px;
+}
+
+.task{
+    width: 100%;
+    max-width: 320px;
+    background-color: var(--bs-gray-200);
+    border: none;
+    border-radius: 4px;
+
+    .card-header{
+        span{
+            background-color: var(--bs-gray-300);
+        }
+    }
+}
